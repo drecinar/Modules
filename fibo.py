@@ -1,18 +1,25 @@
-# Fibonacci numbers module
-def fib(n):    # write Fibonacci series up to n
-    a, b = 0, 1
-    while a < n:
-        print(a, end=' ')
-        a, b = b, a+b
-    print()
+class Fibonacci:
+    def __init__(self, n):
+        self.n = n
+    
+    def fib(self):
+        a, b = 0, 1
+        while a < self.n:
+            print(a, end=' ')
+            a, b = b, a+b
+        print()
 
-def fib2(n):   # return Fibonacci series up to n
-    result = []
-    a, b = 0, 1
-    while a < n:
-        result.append(a)
-        a, b = b, a+b
-    return result
+    def fib2(self):
+        result = []
+        a, b = 0, 1
+        while a < self.n:
+            result.append(a)
+            a, b = b, a+b
+        return result
+
+fibonacci = Fibonacci(1000)
+fibonacci.fib()
 
 if __name__ == "__main__":
-    print("This is when the program is executed")
+    fib_list = Fibonacci(500).fib2()
+    print(fib_list)
